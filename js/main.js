@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+ HEAD
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ===============================
-       MENÚ DESPLEGABLE
-    ================================ */
+    
+      /* MENÚ DESPLEGABLE */
 
     const botonesServicios = document.querySelectorAll(".btn-servicios");
 
@@ -33,9 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* ===============================
-       CARRUSEL HERO (PORTADA)
-    ================================ */
+    /*CARRUSEL HERO (PORTADA) */
 
     const slidesHero = document.querySelectorAll('.slide');
     const btnNextHero = document.querySelector('.control.next');
@@ -103,12 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 6000);
 
 });
-=======
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ===============================
-       MENÚ DESPLEGABLE
-    ================================ */
+    /*  MENÚ DESPLEGABLE */
 
     const botonesServicios = document.querySelectorAll(".btn-servicios");
 
@@ -138,9 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* ===============================
-       CARRUSEL HERO (PORTADA)
-    ================================ */
+    /* CARRUSEL HERO (PORTADA)*/
 
     const slidesHero = document.querySelectorAll('.slide');
     const btnNextHero = document.querySelector('.control.next');
@@ -172,9 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 6000);
     }
 
-    /* ===============================
-       CARRUSEL HISTORIA
-    ================================ */
+    /* CARRUSEL HISTORIA */
 
     const carouselHistoria = document.querySelector('.carousel-historia');
     if (!carouselHistoria) return;
