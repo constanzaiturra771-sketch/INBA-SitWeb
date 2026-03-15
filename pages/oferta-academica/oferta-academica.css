@@ -1,0 +1,196 @@
+/* ========================= */
+/*        SECCIONES          */
+/* ========================= */
+
+.seccion-academica{
+padding:60px 0;
+}
+
+/* fondo alternado para que no se vea plano */
+
+.seccion-academica:nth-child(even){
+background:#f7f3f2;
+}
+
+.seccion-academica:nth-child(odd){
+background:#ffffff;
+}
+
+
+/* ========================= */
+/*          TITULOS          */
+/* ========================= */
+
+.seccion-academica h2{
+text-align:center;
+font-size:26px;
+color:#6f1d1b;
+margin-bottom:20px;
+position:relative;
+}
+
+.seccion-academica h2::after{
+content:"";
+display:block;
+width:80px;
+height:3px;
+background:#6f1d1b;
+margin:10px auto 0;
+border-radius:2px;
+}
+
+
+/* ========================= */
+/*           TEXTO           */
+/* ========================= */
+
+.seccion-academica p{
+text-align:center;
+max-width:750px;
+margin:auto;
+line-height:1.7;
+color:#444;
+}
+
+/* bloque destacado para textos importantes */
+
+.texto-destacado{
+background:#ffffff;
+border-left:5px solid #6f1d1b;
+padding:18px 22px;
+margin:25px auto 35px auto;
+max-width:750px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+/* ========================= */
+/*         GRID INFO         */
+/* ========================= */
+
+.info-grid{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+.info-item{
+background:#f7f7f7;
+padding:20px;
+border-radius:10px;
+width:260px;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+text-align:center;
+transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.info-item:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 22px rgba(0,0,0,0.12);
+}
+
+.info-item img{
+width:40px;
+margin-bottom:10px;
+}
+
+
+/* ========================= */
+/*        TABLA PLANES       */
+/* ========================= */
+
+.tabla-planes{
+width:100%;
+max-width:800px;
+margin:30px auto;
+border-collapse:collapse;
+}
+
+.tabla-planes th{
+background:#6f1d1b;
+color:white;
+padding:12px;
+}
+
+.tabla-planes td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+background:white;
+}
+
+
+/* ========================= */
+/*        ASIGNATURAS        */
+/* ========================= */
+
+.asignaturas-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:25px;
+}
+
+.asignatura{
+background:#6f1d1b;
+color:white;
+padding:10px 20px;
+border-radius:20px;
+font-size:14px;
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.asignatura:hover{
+transform:scale(1.05);
+box-shadow:0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+/* ========================= */
+/*      EGRESADOS INBA       */
+/* ========================= */
+
+.egresados-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+margin-top:35px;
+}
+
+.egresado{
+background:#ffffff;
+padding:22px;
+border-radius:12px;
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
+text-align:center;
+transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.egresado:hover{
+transform:translateY(-6px);
+box-shadow:0 16px 28px rgba(0,0,0,0.12);
+}
+
+.egresado img{
+width:90px;
+height:90px;
+object-fit:cover;
+border-radius:50%;
+margin-bottom:12px;
+border:3px solid #e5d6d6;
+}
+
+.egresado h3{
+font-size:18px;
+color:#6f1d1b;
+margin-bottom:8px;
+}
+
+.egresado p{
+font-size:14px;
+color:#444;
+line-height:1.4;
+}

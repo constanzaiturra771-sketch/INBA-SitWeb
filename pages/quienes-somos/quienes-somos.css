@@ -1,4 +1,170 @@
-/* TITULO DIRECTORIO */
+/* ========================= */
+/* SECCIONES INSTITUCIONALES */
+/* ========================= */
+
+.seccion-institucional {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* separador entre secciones */
+
+.seccion-institucional:not(:first-child)::before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: #e2d6d5;
+    margin: 0 auto 45px;
+}
+
+
+/* ========================= */
+/* TITULOS */
+/* ========================= */
+
+.seccion-institucional h2 {
+    font-size: 30px;
+    color: #6f1d1b;
+    margin-bottom: 22px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.seccion-institucional h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #6f1d1b;
+    margin: 10px auto 0;
+}
+
+
+/* ========================= */
+/* TEXTO */
+/* ========================= */
+
+.seccion-institucional p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.85;
+    max-width: 720px;
+    margin: 0 auto 18px;
+    text-align: justify;
+}
+
+
+/* ========================= */
+/* CARRUSEL HISTORIA */
+/* ========================= */
+
+.carousel-historia {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin-top: 35px;
+}
+/* ========================= */
+/* TITULOS DE SECCION */
+/* ========================= */
+
+.seccion-institucional h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #6f1d1b;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.seccion-institucional h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #6f1d1b;
+    margin: 10px auto 0;
+}
+
+
+/* ========================= */
+/* TEXTO */
+/* ========================= */
+
+.seccion-institucional p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 760px;
+    margin: 0 auto 16px;
+}
+
+
+/* ========================= */
+/* CARRUSEL HISTORIA */
+/* ========================= */
+
+.carousel-historia {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin-top: 30px;
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.carousel-slide.activo {
+    opacity: 1;
+}
+
+
+/* ========================= */
+/* CONTROLES CARRUSEL */
+/* ========================= */
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.45);
+    color: white;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.carousel-control.prev { 
+    left: 14px; 
+}
+
+.carousel-control.next { 
+    right: 14px; 
+}
+
+.carousel-control:hover {
+    background: rgba(0,0,0,0.65);
+}
+
+
+/* ========================= */
+/* DIRECTORIO */
+/* ========================= */
 
 #directorio h2 {
     text-align: center;
@@ -16,26 +182,44 @@
     margin: 10px auto 0;
 }
 
-/* DIRECTORIO */
-
 .directorio-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    margin-top: 30px;
+    max-width: 900px;
+    margin: 30px auto 10px;
 }
 
 .directorio-item {
+    width: 180px;
     text-align: center;
+    transition: transform 0.25s ease;
 }
+
+.directorio-item:hover {
+    transform: translateY(-6px);
+}
+
+
+/* ========================= */
+/* IMAGENES DIRECTORIO */
+/* ========================= */
 
 .directorio-item img {
     width: 180px;
     height: 220px;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    display: block;
+    margin: 0 auto;
 }
+
+
+/* ========================= */
+/* TEXTO DIRECTORIO */
+/* ========================= */
 
 .directorio-item .nombre {
     margin-top: 10px;
@@ -50,7 +234,9 @@
 }
 
 
+/* ========================= */
 /* CTA MATRÍCULA */
+/* ========================= */
 
 .cta-unete {
     display: flex;
@@ -87,53 +273,3 @@
     background-color: #8c1d18;
     transform: translateY(-2px);
 }
-
-   /* CARRUSEL HISTORIA */
-.carousel-historia {
-    position: relative;
-    width: 100%;
-    height: 240px;
-    margin: 30px auto 10px;
-    overflow: hidden;
-    border-radius: 0;        
-    box-shadow: none;       
-    background: transparent;
-}
-
-.carousel-slide {
-    position: absolute;
-    inset: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-}
-
-.carousel-slide.activo {
-    opacity: 1;
-}
-
-
-/* Controles */
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.45);
-    color: white;
-    border: none;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 5;
-}
-
-.carousel-control.prev { left: 14px; }
-.carousel-control.next { right: 14px; }
-
-.carousel-control:hover {
-    background: rgba(0,0,0,0.65);
-} 

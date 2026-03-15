@@ -1,0 +1,146 @@
+/* ENCABEZADO SERVICIOS */
+
+.encabezado-servicios {
+    text-align: center;
+    padding: 70px 20px 40px 20px;
+    background: white;
+}
+
+.encabezado-servicios h1 {
+    font-size: 36px;
+    color: #6f1d1b;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.encabezado-servicios h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #6f1d1b;
+    margin: 12px auto 0 auto;
+}
+
+.subtitulo-servicios {
+    text-align: center;
+    max-width: 750px;
+    margin: 25px auto 60px auto;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* SECCIONES SERVICIO */
+
+.seccion-servicio {
+    padding: 70px 20px;
+}
+
+
+/* INTERCALADO BLANCO / GRIS */
+
+#biblioteca{
+    background:#f7f3f2;
+}
+
+#comedor{
+    background:white;
+}
+
+#deportes{
+    background:#f7f3f2;
+}
+
+#orientacion{
+    background:white;
+}
+
+
+/* CONTENIDO */
+
+.contenido-servicio {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+
+/* TEXTO */
+
+.texto-servicio {
+    flex: 1;
+    min-width: 280px;
+}
+
+.texto-servicio h2 {
+    color: #6f1d1b;
+    margin-bottom: 15px;
+    font-size: 26px;
+    position: relative;
+}
+
+.texto-servicio h2::after{
+    content:"";
+    display:block;
+    width:50px;
+    height:3px;
+    background:#6f1d1b;
+    margin-top:8px;
+}
+
+.texto-servicio p{
+    color:#444;
+    line-height:1.7;
+    font-size:15px;
+}
+
+
+/* IMAGENES */
+
+.imagenes-servicio {
+    flex: 1;
+    display: flex;
+    gap: 18px;
+    min-width: 280px;
+}
+
+.imagenes-servicio img {
+    width: 50%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 230px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagenes-servicio img:hover{
+    transform: scale(1.04);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .contenido-servicio {
+        flex-direction: column;
+        text-align:center;
+    }
+
+    .imagenes-servicio {
+        width: 100%;
+    }
+
+    .imagenes-servicio img {
+        width: 100%;
+        height: 200px;
+    }
+
+}

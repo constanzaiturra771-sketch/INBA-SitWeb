@@ -448,6 +448,17 @@ footer {
     box-shadow: 0 8px 18px rgba(0,0,0,0.22);
     transform: rotate(-1deg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nota:visited,
+.nota:hover,
+.nota:active {
+    text-decoration: none;
+    color: inherit;
 }
 
 .nota:nth-child(2) {
@@ -470,6 +481,7 @@ footer {
     margin: 0;
 }
 
+
 /* HOVER */
 .nota:hover {
     transform: scale(1.06) rotate(0deg);
@@ -491,6 +503,47 @@ footer {
 
 .nota:hover .chinche {
     transform: translateX(-50%) scale(1.15);
+}
+
+
+/* CALENDARIO */
+
+.calendario {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.calendario h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #6f1d1b;
+    border-bottom: 2px solid #e2d6d5;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.calendario iframe {
+    width: 95%;
+    max-width: 1000px;
+    height: 600px;
+    border-radius: 14px;
+    border-top: 6px solid #6f1d1b;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    background: white;
+}
+
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e0e0e0;
+}
+
+.footer-container a:hover {
+    color: #f5d0c5; /* tono claro que combine con tu burdeo */
 }
 
 
@@ -601,3 +654,8 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    .calendario iframe {
+        height: 450px;
+    }
+}

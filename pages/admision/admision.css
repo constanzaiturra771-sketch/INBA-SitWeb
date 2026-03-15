@@ -1,0 +1,192 @@
+/* BANNER ADMISION */
+
+.banner-admision{
+padding:50px 20px 40px 20px;
+text-align:center;
+background:white;
+margin-bottom:20px;
+}
+
+.banner-admision h1{
+font-size:34px;
+color:#6f1d1b;
+margin-bottom:15px;
+position:relative;
+}
+
+.banner-admision h1::after{
+content:"";
+display:block;
+width:90px;
+height:3px;
+background:#6f1d1b;
+margin:10px auto 0;
+}
+
+.banner-admision p{
+max-width:700px;
+margin:20px auto 0 auto;
+font-size:16px;
+color:#555;
+line-height:1.6;
+}
+
+
+/* SECCIONES */
+
+.seccion-admision{
+padding:50px 0;
+}
+
+/* INTERCALADO DE FONDOS */
+
+.seccion-admision:nth-of-type(even){
+background:#f7f3f2;
+}
+
+.seccion-admision:nth-of-type(odd){
+background:white;
+}
+
+
+/* TITULOS */
+
+.seccion-admision h2{
+text-align:center;
+font-size:26px;
+color:#6f1d1b;
+margin-bottom:25px;
+position:relative;
+}
+
+.seccion-admision h2::after{
+content:"";
+display:block;
+width:80px;
+height:3px;
+background:#6f1d1b;
+margin:10px auto 0;
+}
+
+
+/* LISTAS */
+
+.lista-admision{
+max-width:600px;
+margin:20px auto;
+line-height:1.8;
+color:#444;
+font-size:15px;
+}
+
+
+/* TIMELINE */
+
+.timeline{
+max-width:650px;
+margin:40px auto;
+border-left:3px solid #6f1d1b;
+padding-left:25px;
+position:relative;
+}
+
+.evento{
+margin-bottom:30px;
+position:relative;
+}
+
+.evento::before{
+content:"";
+width:14px;
+height:14px;
+background:#6f1d1b;
+border-radius:50%;
+position:absolute;
+left:-32px;
+top:4px;
+}
+
+.fecha{
+font-weight:bold;
+color:#6f1d1b;
+display:block;
+margin-bottom:5px;
+font-size:16px;
+}
+
+
+/* AVISO POSTULACION */
+
+.aviso-postulacion{
+background:#fff4f4;
+border:2px solid #6f1d1b;
+color:#6f1d1b;
+font-weight:600;
+text-align:center;
+padding:14px;
+max-width:350px;
+margin:0 auto 25px auto;
+border-radius:8px;
+}
+
+
+/* PASOS POSTULACION */
+
+.pasos-postulacion{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+margin-top:30px;
+}
+
+.paso{
+background:#f7f7f7;
+padding:22px;
+border-radius:10px;
+width:220px;
+text-align:center;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.paso:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 22px rgba(0,0,0,0.15);
+}
+
+.numero{
+display:inline-block;
+background:#6f1d1b;
+color:white;
+width:36px;
+height:36px;
+line-height:36px;
+border-radius:50%;
+font-weight:bold;
+margin-bottom:12px;
+}
+
+
+/* BOTON (NO LO CAMBIÉ) */
+
+.btn-postular{
+display:inline-block;
+background:#6f1d1b;
+color:white;
+padding:14px 32px;
+margin-top:30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-postular:hover{
+background:#8c1d18;
+transform:translateY(-2px);
+}
+
+#postulacion{
+text-align:center;
+}
