@@ -1,4 +1,4 @@
-/* ESTILOS GENERALES*/
+/* ESTILOS GENERALES */
 * {
     box-sizing: border-box;
 }
@@ -11,15 +11,25 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
+/* Evitar desbordes horizontales */
+html, body {
+    overflow-x: hidden;
+}
 
+/* Asegurar que las imágenes se adapten */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* HEADER */
 header {
     background-color: #6f1d1b;
     padding: 30px 20px; 
     position: relative;
     z-index: 5;
 }
-
 
 .contenedor-header {
     display: flex;
@@ -30,7 +40,6 @@ header {
     padding: 0 24px;   
     margin: 0 auto;
 }
-
 
 .titulo-institucional {
     display: flex;
@@ -50,10 +59,7 @@ header {
     line-height: 1.2;
 }
 
-
-
 /* MENÚ PRINCIPAL */
-
 nav {
     width: 100%;
     display: flex;
@@ -92,7 +98,6 @@ nav {
 }
 
 /* MENÚ DESPLEGABLE */
-
 .dropdown::after {
     content: "";
     position: absolute;
@@ -146,8 +151,7 @@ nav {
     opacity: 0.85;
 }
 
-/*  HERO CAROUSEL */
-
+/* HERO CAROUSEL */
 .hero-carousel {
     position: relative;
     height: 480px; 
@@ -155,8 +159,6 @@ nav {
     overflow: hidden;
     z-index: 1;
 }
-
-
 
 .slide {
     position: absolute;
@@ -186,7 +188,7 @@ nav {
     z-index: 1;
 }
 
-/* CONTENIDO */
+/* CONTENIDO DEL SLIDE */
 .contenido-slide {
     position: absolute;
     bottom: 90px;
@@ -196,7 +198,6 @@ nav {
     z-index: 2;
     padding: 30px;
 }
-
 
 .etiqueta {
     background: rgba(255,255,255,0.92);
@@ -233,8 +234,7 @@ nav {
     transform: translateY(-2px);
 }
 
-
-/* Controles */
+/* CONTROLES DEL SLIDE */
 .control {
     position: absolute;
     top: 50%;
@@ -254,7 +254,6 @@ nav {
 .control.next { right: 15px; }
 
 /* CONTENIDO PRINCIPAL */
-
 main {
     max-width: 1100px;
     margin: 50px auto;
@@ -267,11 +266,10 @@ main {
     z-index: 1;
 }
 
-
+/* BIENVENIDA */
 .bienvenida {
     text-align: center;
 }
-
 
 .titulo-bienvenida {
     display: inline-block;
@@ -284,13 +282,13 @@ main {
     padding-bottom: 6px;
 }
 
+/* HERO */
 .hero {
     text-align: center;
 }
 
-
 .titulo-hero {
-      display: inline-block;
+    display: inline-block;
     margin: 0 auto 20px;
     font-size: 1.8rem;
     font-weight: 700;
@@ -300,9 +298,7 @@ main {
     padding-bottom: 6px;
 }
 
-
-/*FOOTER*/
-
+/* FOOTER */
 footer {
     background-color: #6f1d1b;
     color: #faf7f6;
@@ -312,12 +308,10 @@ footer {
     text-align: center; 
 }
 
-
 .footer-container {
     max-width: 900px; 
     margin: 0 auto;   
 }
-
 
 .footer-titles {
     display: flex;
@@ -326,7 +320,6 @@ footer {
     gap: 100px; 
     flex-wrap: wrap; 
 }
-
 
 .footer-left p,
 .footer-right p {
@@ -360,9 +353,20 @@ footer {
     margin: 3px 0;
 }
 
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e0e0e0;
+}
+
+.footer-container a:hover {
+    color: #f5d0c5;
+}
 
 /* TARJETAS INICIO */
-
 .cards-inicio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -412,8 +416,7 @@ footer {
     background-color: #8c1d18;
 }
 
-/*  INFO DESTACADA  */
-
+/* INFO DESTACADA */
 .info-destacada {
     margin: 80px 0;
     text-align: center;
@@ -448,7 +451,6 @@ footer {
     box-shadow: 0 8px 18px rgba(0,0,0,0.22);
     transform: rotate(-1deg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
     display: block;
     text-decoration: none;
     color: inherit;
@@ -481,7 +483,6 @@ footer {
     margin: 0;
 }
 
-
 /* HOVER */
 .nota:hover {
     transform: scale(1.06) rotate(0deg);
@@ -505,9 +506,7 @@ footer {
     transform: translateX(-50%) scale(1.15);
 }
 
-
 /* CALENDARIO */
-
 .calendario {
     margin: 80px 0;
     text-align: center;
@@ -530,27 +529,12 @@ footer {
     border-top: 6px solid #6f1d1b;
     box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     background: white;
+    max-width: 100%;
 }
 
-
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #e0e0e0;
-}
-
-.footer-container a:hover {
-    color: #f5d0c5; /* tono claro que combine con tu burdeo */
-}
-
-
-/*  RESPONSIVE  */
+/* RESPONSIVE */
 @media (max-width: 768px) {
 
-    /* HEADER */
     header {
         padding: 20px 12px;
     }
@@ -580,7 +564,6 @@ footer a:hover {
         width: 100%;
     }
 
-    /* MENÚ  */
     .menu {
         flex-direction: column;
         width: 100%;
@@ -612,7 +595,6 @@ footer a:hover {
         display: none;
     }
 
-    /* HERO SLIDES  */
     .contenido-slide {
         left: 20px;
         right: 20px;
@@ -624,7 +606,6 @@ footer a:hover {
         font-size: 24px;
     }
 
-    /*  DIRECTORIO  */
     .directorio-grid {
         flex-wrap: wrap;
         justify-content: center;
@@ -635,7 +616,14 @@ footer a:hover {
         height: 200px;
     }
 
-    /*  FOOTER */
+    main {
+        padding: 30px 20px;
+    }
+
+    .cards-inicio {
+        gap: 20px;
+    }
+
     .footer-titles {
         flex-direction: column;
         align-items: center;
@@ -652,9 +640,7 @@ footer a:hover {
         justify-content: center; 
         margin-top: 8px;
     }
-}
 
-@media (max-width: 768px) {
     .calendario iframe {
         height: 450px;
     }

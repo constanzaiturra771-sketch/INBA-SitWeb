@@ -93,3 +93,47 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 6000);
 
 });
+
+// BOTONES LEER MAS
+const botonesLeer = document.querySelectorAll(".btn-leer");
+
+botonesLeer.forEach(boton => {
+
+    boton.addEventListener("click", function(e){
+        e.preventDefault();
+
+        const noticia = this.closest(".card-noticia");
+        const texto = noticia.querySelector(".texto-extra");
+
+        if(texto){
+            texto.classList.toggle("abierto");
+
+            if(texto.classList.contains("abierto")){
+                this.textContent = "Leer menos";
+            }else{
+                this.textContent = "Leer más";
+            }
+        }
+
+    });
+
+});
+
+
+// BOTON VER PROGRAMACION
+const botonCalendario = document.querySelector(".btn-ver-calendario");
+const calendario = document.getElementById("calendario");
+
+botonCalendario.addEventListener("click", function(e){
+
+    e.preventDefault();
+
+    calendario.classList.toggle("mostrar");
+
+    if(calendario.classList.contains("mostrar")){
+        this.textContent = "Ocultar programación";
+    }else{
+        this.textContent = "Ver programación";
+    }
+
+});

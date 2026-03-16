@@ -1,6 +1,7 @@
-/* ENCABEZADO SERVICIOS */
-
+/* Encabezado de la página de servicios */
 .encabezado-servicios {
+    position: relative;
+    overflow: hidden;
     text-align: center;
     padding: 70px 20px 40px 20px;
     background: white;
@@ -12,8 +13,10 @@
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
+    z-index: 1;
 }
 
+/* línea debajo del título */
 .encabezado-servicios h1::after {
     content: "";
     display: block;
@@ -23,6 +26,7 @@
     margin: 12px auto 0 auto;
 }
 
+/* texto introductorio */
 .subtitulo-servicios {
     text-align: center;
     max-width: 750px;
@@ -30,37 +34,45 @@
     color: #555;
     font-size: 16px;
     line-height: 1.6;
+    position: relative;
+    z-index: 1;
 }
 
+/* imagen de fondo del encabezado */
+.fondo-servicios {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    z-index: 0;
+}
 
-/* SECCIONES SERVICIO */
-
+/* secciones de cada servicio */
 .seccion-servicio {
     padding: 70px 20px;
 }
 
-
-/* INTERCALADO BLANCO / GRIS */
-
-#biblioteca{
-    background:#f7f3f2;
+/* colores de fondo alternados */
+#biblioteca {
+    background: #f7f3f2;
 }
 
-#comedor{
-    background:white;
+#comedor {
+    background: white;
 }
 
-#deportes{
-    background:#f7f3f2;
+#deportes {
+    background: #f7f3f2;
 }
 
-#orientacion{
-    background:white;
+#orientacion {
+    background: white;
 }
 
-
-/* CONTENIDO */
-
+/* contenedor del contenido */
 .contenido-servicio {
     max-width: 1100px;
     margin: auto;
@@ -70,39 +82,39 @@
     flex-wrap: wrap;
 }
 
-
-/* TEXTO */
-
+/* bloque de texto */
 .texto-servicio {
     flex: 1;
     min-width: 280px;
 }
 
+/* títulos de secciones centrados */
 .texto-servicio h2 {
     color: #6f1d1b;
     margin-bottom: 15px;
     font-size: 26px;
     position: relative;
+    text-align: center; /* centramos línea ::after */
+    width: 100%;        /* h2 ocupa todo el contenedor */
 }
 
-.texto-servicio h2::after{
-    content:"";
-    display:block;
-    width:50px;
-    height:3px;
-    background:#6f1d1b;
-    margin-top:8px;
+/* línea debajo del subtítulo */
+.texto-servicio h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #6f1d1b;
+    margin: 8px auto 0 auto;
 }
 
-.texto-servicio p{
-    color:#444;
-    line-height:1.7;
-    font-size:15px;
+.texto-servicio p {
+    color: #444;
+    line-height: 1.7;
+    font-size: 15px;
 }
 
-
-/* IMAGENES */
-
+/* imágenes de cada servicio */
 .imagenes-servicio {
     flex: 1;
     display: flex;
@@ -119,19 +131,17 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.imagenes-servicio img:hover{
+/* efecto al pasar el mouse */
+.imagenes-servicio img:hover {
     transform: scale(1.04);
     box-shadow: 0 10px 22px rgba(0,0,0,0.18);
 }
 
-
-/* RESPONSIVE */
-
+/* ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-
     .contenido-servicio {
         flex-direction: column;
-        text-align:center;
+        text-align: center;
     }
 
     .imagenes-servicio {
@@ -142,5 +152,4 @@
         width: 100%;
         height: 200px;
     }
-
 }

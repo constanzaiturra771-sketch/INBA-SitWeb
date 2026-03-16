@@ -1,7 +1,12 @@
+/* encabezado de la página de contacto */
+
 .encabezado-contacto{
 
+position:relative;
+overflow:hidden;
+
 text-align:center;
-padding:45px 20px 30px 20px;
+padding:70px 20px 60px 20px;
 background:white;
 
 }
@@ -13,6 +18,7 @@ color:#6f1d1b;
 margin-bottom:10px;
 position:relative;
 display:inline-block;
+z-index:1;
 
 }
 
@@ -23,11 +29,29 @@ margin:12px auto 0 auto;
 color:#555;
 line-height:1.6;
 font-size:15px;
+position:relative;
+z-index:1;
 
 }
 
 
-/* TARJETAS */
+/* imagen de fondo del encabezado */
+
+.fondo-contacto{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0.35;
+z-index:0;
+
+}
+
+
+/* tarjetas con información de contacto */
 
 .tarjetas-contacto{
 
@@ -86,7 +110,7 @@ margin:3px 0;
 
 }
 
-/* links dentro de tarjetas contacto */
+/* enlaces dentro de las tarjetas */
 
 .tarjeta a{
 color:#444;
@@ -99,7 +123,7 @@ color:#6f1d1b;
 }
 
 
-/* FORMULARIO Y MAPA */
+/* contenedor del formulario y el mapa */
 
 .contacto-contenido{
 
@@ -115,7 +139,7 @@ gap:50px;
 }
 
 
-/* TITULOS */
+/* títulos del formulario y del mapa */
 
 .formulario-contacto h2,
 .mapa-contacto h2{
@@ -126,6 +150,8 @@ margin-bottom:20px;
 position:relative;
 
 }
+
+/* línea decorativa bajo el título */
 
 .formulario-contacto h2::after,
 .mapa-contacto h2::after{
@@ -140,7 +166,7 @@ margin-top:8px;
 }
 
 
-/* FORMULARIO */
+/* formulario de contacto */
 
 .formulario-contacto form{
 
@@ -169,7 +195,7 @@ border-color:#6f1d1b;
 }
 
 
-/* BOTON (NO MODIFIQUE TU ESTILO) */
+/* botón para enviar el mensaje */
 
 .formulario-contacto button{
 
@@ -192,7 +218,7 @@ background:#8c1d18;
 }
 
 
-/* MAPA */
+/* mapa */
 
 .mapa-contacto iframe{
 
@@ -206,7 +232,7 @@ box-shadow:0 6px 18px rgba(0,0,0,0.15);
 }
 
 
-/* RESPONSIVE */
+/* ajuste para celulares */
 
 @media(max-width:768px){
 

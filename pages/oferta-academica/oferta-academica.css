@@ -1,12 +1,10 @@
-/* ========================= */
-/*        SECCIONES          */
-/* ========================= */
+/* secciones de la página académica */
 
 .seccion-academica{
 padding:60px 0;
 }
 
-/* fondo alternado para que no se vea plano */
+/* colores de fondo alternados para que no se vea plano */
 
 .seccion-academica:nth-child(even){
 background:#f7f3f2;
@@ -17,9 +15,7 @@ background:#ffffff;
 }
 
 
-/* ========================= */
-/*          TITULOS          */
-/* ========================= */
+/* títulos de las secciones */
 
 .seccion-academica h2{
 text-align:center;
@@ -40,9 +36,7 @@ border-radius:2px;
 }
 
 
-/* ========================= */
-/*           TEXTO           */
-/* ========================= */
+/* párrafos */
 
 .seccion-academica p{
 text-align:center;
@@ -52,7 +46,7 @@ line-height:1.7;
 color:#444;
 }
 
-/* bloque destacado para textos importantes */
+/* bloque para destacar texto importante */
 
 .texto-destacado{
 background:#ffffff;
@@ -64,9 +58,7 @@ box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
 
-/* ========================= */
-/*         GRID INFO         */
-/* ========================= */
+/* contenedor de información con tarjetas */
 
 .info-grid{
 display:flex;
@@ -97,9 +89,7 @@ margin-bottom:10px;
 }
 
 
-/* ========================= */
-/*        TABLA PLANES       */
-/* ========================= */
+/* tabla del plan de estudios */
 
 .tabla-planes{
 width:100%;
@@ -122,9 +112,7 @@ background:white;
 }
 
 
-/* ========================= */
-/*        ASIGNATURAS        */
-/* ========================= */
+/* lista de asignaturas */
 
 .asignaturas-grid{
 display:flex;
@@ -149,9 +137,7 @@ box-shadow:0 6px 12px rgba(0,0,0,0.15);
 }
 
 
-/* ========================= */
-/*      EGRESADOS INBA       */
-/* ========================= */
+/* sección de egresados destacados */
 
 .egresados-grid{
 display:grid;
@@ -193,4 +179,34 @@ margin-bottom:8px;
 font-size:14px;
 color:#444;
 line-height:1.4;
+}
+
+
+/* fondo con imagen en la sección científico-humanista */
+
+.seccion-cientifico{
+position:relative;
+overflow:hidden;
+}
+
+/* imagen agregada desde el html */
+
+.fondo-cientifico{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0.40;
+z-index:0;
+}
+
+/* el contenido queda encima de la imagen */
+
+.seccion-cientifico h2,
+.seccion-cientifico p,
+.seccion-cientifico .info-grid{
+position:relative;
+z-index:1;
 }

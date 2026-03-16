@@ -1,6 +1,4 @@
-/* ========================= */
-/* SECCIONES INSTITUCIONALES */
-/* ========================= */
+/* secciones institucionales */
 
 .seccion-institucional {
     max-width: 900px;
@@ -10,7 +8,7 @@
     position: relative;
 }
 
-/* separador entre secciones */
+/* línea separadora entre secciones */
 
 .seccion-institucional:not(:first-child)::before {
     content: "";
@@ -22,9 +20,7 @@
 }
 
 
-/* ========================= */
-/* TITULOS */
-/* ========================= */
+/* títulos de las secciones */
 
 .seccion-institucional h2 {
     font-size: 30px;
@@ -44,9 +40,7 @@
 }
 
 
-/* ========================= */
-/* TEXTO */
-/* ========================= */
+/* texto principal */
 
 .seccion-institucional p {
     font-size: 16px;
@@ -58,9 +52,7 @@
 }
 
 
-/* ========================= */
-/* CARRUSEL HISTORIA */
-/* ========================= */
+/* carrusel de la sección historia */
 
 .carousel-historia {
     position: relative;
@@ -68,9 +60,9 @@
     height: 320px;
     margin-top: 35px;
 }
-/* ========================= */
-/* TITULOS DE SECCION */
-/* ========================= */
+
+
+/* títulos centrados con línea decorativa */
 
 .seccion-institucional h2 {
     text-align: center;
@@ -90,9 +82,7 @@
 }
 
 
-/* ========================= */
-/* TEXTO */
-/* ========================= */
+/* párrafos */
 
 .seccion-institucional p {
     font-size: 16px;
@@ -104,9 +94,7 @@
 }
 
 
-/* ========================= */
-/* CARRUSEL HISTORIA */
-/* ========================= */
+/* carrusel */
 
 .carousel-historia {
     position: relative;
@@ -130,9 +118,7 @@
 }
 
 
-/* ========================= */
-/* CONTROLES CARRUSEL */
-/* ========================= */
+/* botones para cambiar las imágenes */
 
 .carousel-control {
     position: absolute;
@@ -162,9 +148,7 @@
 }
 
 
-/* ========================= */
-/* DIRECTORIO */
-/* ========================= */
+/* sección del directorio */
 
 #directorio h2 {
     text-align: center;
@@ -191,9 +175,13 @@
     margin: 30px auto 10px;
 }
 
+/* tarjeta de cada persona del directorio */
+
 .directorio-item {
     width: 180px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     transition: transform 0.25s ease;
 }
 
@@ -202,41 +190,36 @@
 }
 
 
-/* ========================= */
-/* IMAGENES DIRECTORIO */
-/* ========================= */
+/* imagen del directorio */
 
 .directorio-item img {
-    width: 180px;
+    width: 100%;
     height: 220px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 10px 22px rgba(0,0,0,0.18);
     display: block;
-    margin: 0 auto;
+    margin-bottom: 12px;
 }
 
-
-/* ========================= */
-/* TEXTO DIRECTORIO */
-/* ========================= */
+/* nombre y cargo */
 
 .directorio-item .nombre {
-    margin-top: 10px;
     font-weight: 700;
     font-size: 15px;
+    text-align: center;
+    margin: 0;
 }
 
 .directorio-item .cargo {
-    margin-top: 4px;
     font-size: 14px;
     color: #666;
+    text-align: center;
+    margin: 4px 0 0 0;
 }
 
 
-/* ========================= */
-/* CTA MATRÍCULA */
-/* ========================= */
+/* botón para ir a admisión o matrícula */
 
 .cta-unete {
     display: flex;

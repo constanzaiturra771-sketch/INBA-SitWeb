@@ -1,3 +1,5 @@
+/* estilos generales de la sección de noticias */
+
 .titulo-seccion {
     text-align: center;
     margin-top: 40px;
@@ -9,6 +11,8 @@
     margin: 10px auto 50px auto;
 }
 
+/* título principal */
+
 .titulo-noticias {
     text-align: center;
     margin-top: 50px;
@@ -17,6 +21,8 @@
     position: relative;
     letter-spacing: 1px;
 }
+
+/* línea decorativa bajo el título */
 
 .titulo-noticias::after {
     content: "";
@@ -28,6 +34,8 @@
     border-radius: 2px;
 }
 
+/* pequeño texto introductorio */
+
 .subtitulo-noticias {
     text-align: center;
     max-width: 700px;
@@ -38,18 +46,22 @@
 }
 
 
-    .hero-noticias {
-        padding: 60px 15px;
-    }
+/* sección principal de noticias */
 
-    .hero-noticias h1 {
-        font-size: 26px;
-    }
+.hero-noticias {
+    padding: 60px 15px;
+}
 
-    .hero-noticias p {
-        font-size: 16px;
-    }
+.hero-noticias h1 {
+    font-size: 26px;
+}
 
+.hero-noticias p {
+    font-size: 16px;
+}
+
+
+/* contenedor de los bloques de noticias */
 
 .bloque-noticias {
     margin: 60px auto;
@@ -57,11 +69,16 @@
     padding: 0 20px;
 }
 
+/* subtítulos de cada bloque */
+
 .bloque-noticias h2 {
     border-left: 6px solid #7b1e3a; 
     padding-left: 15px;
     margin-bottom: 25px;
 }
+
+
+/* tarjeta de cada noticia */
 
 .card-noticia {
     background: #ffffff;
@@ -75,10 +92,14 @@
     margin-top: 10px;
 }
 
+/* fecha de la noticia */
+
 .fecha {
     font-size: 14px;
     color: #777;
 }
+
+/* etiqueta de categoría */
 
 .categoria {
     font-size: 12px;
@@ -87,12 +108,17 @@
     color: white;
 }
 
+/* colores de categorías */
+
 .comunicado { background: #7b1e3a; }
 .actividad { background: #7b1e3a; }
 .evento { background: #7b1e3a; }
 .prensa { background: #7b1e3a; }
 
-.btn-leer {
+
+/* botón para leer más */
+
+.btn-leer, .btn-leer-evento {
     display: inline-block;
     margin-top: 15px;
     padding: 8px 15px;
@@ -100,15 +126,30 @@
     color: white;
     text-decoration: none;
     border-radius: 4px;
+    cursor: pointer;
 }
 
-.btn-leer:hover {
+.btn-leer:hover, .btn-leer-evento:hover {
     background: #5a142a;
 }
+
+
+/* contenedor del calendario */
 
 .calendario-contenedor {
     margin-top: 30px;
     text-align: center;
+
+    /* oculto al inicio */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+}
+
+/* cuando se muestra */
+
+.calendario-contenedor.mostrar {
+    max-height: 800px;
 }
 
 .calendario-contenedor iframe {
@@ -117,8 +158,25 @@
     max-width: 1000px;
 }
 
+/* ajuste para celular */
+
 @media (max-width: 768px) {
     .calendario-contenedor iframe {
         height: 350px;
     }
+}
+
+
+/* texto extra que se despliega */
+
+.texto-extra {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.texto-extra.abierto {
+    max-height: 500px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
