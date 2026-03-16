@@ -148,12 +148,13 @@
         width: 100%;
         flex-direction: column; 
         gap: 15px;
+        align-items: center; 
     }
 
     .imagenes-servicio img {
-        width: 100%;
+        width: 100%; 
         height: auto; 
-        max-height: 300px; 
-        object-fit: cover; 
+        max-width: 500px; 
+        object-fit: cover;
     }
 }
